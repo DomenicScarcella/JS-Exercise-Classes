@@ -87,13 +87,13 @@ class Airplane {
    }
    drive(distance){
     let maxMiles = this.tank * this.milesPerGallon;
-      if(distance >= maxMiles){
-        this.odometer += maxMiles;
-        this.tank = 0;
-        return `I ran out of fuel at ${maxMiles} miles!`
-      }else if(distance < maxMiles){
-        this.odometer += distance;
-        this.tank -= (distance / this.milesPerGallon);
+    if(distance >= maxMiles){
+      this.odometer += maxMiles;
+      this.tank = 0;
+      return `I ran out of fuel at ${maxMiles} miles!`
+    }else {
+      this.odometer += distance;
+      this.tank -= (distance / this.milesPerGallon);
     }
    }
   }
